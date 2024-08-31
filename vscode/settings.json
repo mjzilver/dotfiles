@@ -1,0 +1,50 @@
+{
+    // Editor settings
+    "editor.inlineSuggest.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+  
+    // Files and workspace settings
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "**/node_modules": true
+    },
+    "breadcrumbs.enabled": true,
+    "workbench.editor.enablePreview": false,
+  
+    // Git settings
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "never",
+    "git.enableSmartCommit": true,
+  
+    // Terminal settings
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+  
+    // JavaScript/TypeScript settings
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "eslint.run": "onSave",
+    "eslint.validate": [
+      "javascript",
+      "typescript"
+    ],
+  
+    // CMake settings
+    "cmake.configureOnOpen": true
+  }
+  
