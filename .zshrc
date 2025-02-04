@@ -3,16 +3,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Homebrew for MacOS
-if [[ -f "/opt/homebrew/bin/brew" ]] then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
-# Homebrew for Linux
-if [[ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]] then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -47,8 +37,19 @@ zinit cdreplay -q
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Keybindings vi mode
+# Enable vi mode
 bindkey -v
+
+# Delete key
+bindkey "^[[3~" delete-char
+
+# Home and End keys
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
+# Page Up and Page Down for moving one line up/down
+bindkey "^[[5~" up-line-or-history
+bindkey "^[[6~" down-line-or-history
 
 # History
 HISTSIZE=5000
